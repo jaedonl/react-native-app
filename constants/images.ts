@@ -9,6 +9,7 @@ import whiteGradient from "@/assets/images/white-gradient.png";
 import map from "@/assets/images/map.png";
 import noResult from "@/assets/images/no-result.png";
 import booral from "@/assets/images/icon.png";
+import jaesoon from "@/assets/images/jaesoon.jpg";
 
 export default {
     onboarding,
@@ -21,5 +22,6 @@ export default {
     whiteGradient,
     map,
     noResult,
-    booral
+    booral,
+    jaesoon
 };

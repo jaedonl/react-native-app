@@ -11,7 +11,7 @@ type TabIconProps = {
 
 const TabIcon = ({ focused, icon, title} : TabIconProps) => (
     <View className='flex-1 mt-3 flex flex-col items-center'>
-        <Image source={icon} tintColor={focused ? '#c87b00' : '#666876'} resizeMode='contain' className='size-6' />
+        <Image source={icon} tintColor={focused ? '#ff6e00' : '#666876'} resizeMode='contain' className='size-6' />
         <Text className={`${focused ? 'text-primary-300 font-rubik-medium' : 'text-black-200 font-rubik'} text-xs w-full text-center mt-1`}>
             {title}
         </Text>

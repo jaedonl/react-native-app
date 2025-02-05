@@ -23,11 +23,9 @@ interface GlobalProviderProps {
 }
 
 export const GlobalProvider = ({children}: GlobalProviderProps) => {
-    const {
-        data: user,
-        loading,
-        refetch
-    } = useAppwrite({fn: getCurrentUser});
+    const { data: user, loading, refetch } = useAppwrite({
+        fn: getCurrentUser
+    });
 
     const isLoggedIn = !!user;
 
