@@ -28,7 +28,7 @@ const SignIn = () => {
                 <Image source={images.loginOnboarding} className='w-full h-4/6 px-2' resizeMode='contain'/>
 
                 <View className='px-10'>
-                    <Text className='text-base text-center uppercase font-rubik text-black-200'>Welcome to Boorals</Text>
+                    <Text className='text-base text-center uppercase font-rubik text-black-200'>Welcome to Booral</Text>
                     <Text className="text-3xl font-rubik-medium text-black-300 text-center mt-2">
                         Let's find a{"\n"}
                         <Text className="text-primary-300">Booral friend</Text>
