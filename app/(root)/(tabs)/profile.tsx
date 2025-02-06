@@ -69,13 +69,13 @@ const Profile = () => {
                     <SettingsItem icon={icons.wallet} title='Payments' />
                 </View>
 
-                <View className='flex flex-col mt-5 border-t pt-5 border-primary-100'>
+                <View className='flex flex-col mt-5 border-t pt-5 border-primary-200'>
                     {settings.slice(2).map((item, idx) => (
                         <SettingsItem key={idx} {...item} />
                     ))}
                 </View>
 
-                <View className='flex flex-col mt-5 border-t pt-5 border-primary-100'>
+                <View className='flex flex-col mt-5 border-t pt-5 border-primary-200'>
                     <SettingsItem icon={icons.logout} title='Logout' textStyle='text-danger' showArrow={false} onPress={handleLogout} />
                 </View>
             </ScrollView>

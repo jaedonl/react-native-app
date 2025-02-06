@@ -10,6 +10,7 @@ import map from "@/assets/images/map.png";
 import noResult from "@/assets/images/no-result.png";
 import booral from "@/assets/images/icon.png";
 import jaesoon from "@/assets/images/jaesoon.jpg";
+import kimtan from "@/assets/images/kimtan.jpg";
 
 export default {
     onboarding,
@@ -23,5 +24,6 @@ export default {
     map,
     noResult,
     booral,
-    jaesoon
+    jaesoon,
+    kimtan
 };

@@ -11,7 +11,7 @@ type TabIconProps = {
 
 const TabIcon = ({ focused, icon, title} : TabIconProps) => (
     <View className='flex-1 mt-3 flex flex-col items-center'>
-        <Image source={icon} tintColor={focused ? '#ff6e00' : '#666876'} resizeMode='contain' className='size-6' />
+        <Image source={icon} tintColor={focused ? '#ff9913' : '#666876'} resizeMode='contain' className='size-6' />
         <Text className={`${focused ? 'text-primary-300 font-rubik-medium' : 'text-black-200 font-rubik'} text-xs w-full text-center mt-1`}>
             {title}
         </Text>
@@ -50,6 +50,17 @@ const TabsLayout = () => {
                     headerShown: false,
                     tabBarIcon: ({ focused }) => (
                         <TabIcon focused={focused} icon={icons.search} title='Explore' />
+                    )
+                }}
+            />
+            
+            <Tabs.Screen
+                name="chat"
+                options={{
+                    title: 'Chat',
+                    headerShown: false,
+                    tabBarIcon: ({ focused }) => (
+                        <TabIcon focused={focused} icon={icons.chat} title='Chat' />
                     )
                 }}
             />
