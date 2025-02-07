@@ -1,10 +1,12 @@
 import {View, Text, ScrollView, Image, TouchableOpacity, Alert} from 'react-native'
+import React, { useState, useEffect } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context'
 import icons from '@/constants/icons'
-import images from '@/constants/images'
 import { settings } from '@/constants/data'
-import { logout } from '@/lib/appwrite'
+import { account, logout } from '@/lib/appwrite'
 import { useGlobalContext } from '@/lib/global-provider'
+import EditAccountModal from '@/components/EditAccountModal';
+import { createUserProfile } from '@/lib/profileService';
 
 interface SettingsItemProps {
     icon: any;
@@ -13,6 +15,14 @@ interface SettingsItemProps {
     textStyle?: any;
     showArrow?: boolean;
 }
+
+type ProfileType = {
+    username: string;
+    age: number;
+    gender: string;
+    location: string;
+    avatar: string;
+  };
 
 const SettingsItem = ({icon, title, onPress, textStyle, showArrow = true}: SettingsItemProps) => (
     <TouchableOpacity onPress={onPress} className='flex flex-row items-center justify-between py-3'>
@@ -27,6 +37,15 @@ const SettingsItem = ({icon, title, onPress, textStyle, showArrow = true}: Setti
 
 const Profile = () => {
     const {user, refetch} = useGlobalContext();
+    const [profile, setProfile] = useState<ProfileType>({
+        username: '',
+        age: 0,
+        gender: '',
+        location: '',
+        avatar: '',
+    });
+    const [modalVisible, setModalVisible] = useState(false);
+    
 
     const handleLogout = async () => {
         const result = await logout();
@@ -38,6 +57,15 @@ const Profile = () => {
             Alert.alert("Error", "Failed to logout");
         }
     }
+
+    const handleSaveProfile = async (updatedProfile: ProfileType) => {
+        if (!user?.$id) return;
+        // Create or update the user profile in your custom collection
+        const result = await createUserProfile(user.$id, updatedProfile);
+        if (result) {
+          setProfile(updatedProfile);
+        }
+    };
 
     return (
         <SafeAreaView className='h-full bg-white'>
@@ -52,14 +80,12 @@ const Profile = () => {
 
                 <View className='flex flex-row justify-center mt-5'>
                     <View className='flex flex-col items-center relative mt-5'>
-                        {/* <Image source={images.jaesoon} className='size-44 relative rounded-full' /> */}
                         <Image source={{uri: user?.avatar}} className='size-44 relative rounded-full' />
 
-                        <TouchableOpacity className='absolute bottom-11 right-2'>
+                        <TouchableOpacity className='absolute bottom-11 right-2' onPress={() => setModalVisible(true)}>
                             <Image source={icons.edit} className='size-9' />
                         </TouchableOpacity>
 
-                        {/* <Text className='text-2xl font-rubik-bold mt-2'>Jaesoon</Text> */}
                         <Text className='text-2xl font-rubik-bold mt-2'>{user?.name}</Text>
                     </View>
                 </View>
@@ -79,6 +105,12 @@ const Profile = () => {
                     <SettingsItem icon={icons.logout} title='Logout' textStyle='text-danger' showArrow={false} onPress={handleLogout} />
                 </View>
             </ScrollView>
+            <EditAccountModal
+                visible={modalVisible}
+                // currentProfile={profile}
+                onClose={() => setModalVisible(false)}
+                // onSave={handleSaveProfile}
+            />
         </SafeAreaView>
     )
 }
