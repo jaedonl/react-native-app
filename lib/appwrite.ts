@@ -1,11 +1,14 @@
-import {Account, Avatars, Client, OAuthProvider} from 'react-native-appwrite'
+import {Account, Avatars, Client, OAuthProvider, Databases} from 'react-native-appwrite'
 import * as Linking from 'expo-linking';
 import {openAuthSessionAsync} from "expo-web-browser";
 
 export const config = {
     platform: 'com.jaedon.boorals',
     endpoint: process.env.EXPO_PUBLIC_APPWRITE_ENDPOINT,
-    projectId: process.env.EXPO_PUBLIC_APPWRITE_PROJECT_ID
+    projectId: process.env.EXPO_PUBLIC_APPWRITE_PROJECT_ID,
+    databaseId: process.env.EXPO_PUBLIC_APPWRITE_DATABASE_ID,
+    booralsCollectionId: process.env.EXPO_PUBLIC_APPWRITE_BOORALS_COLLECTION_ID,
+    roomsCollectionId: process.env.EXPO_PUBLIC_APPWRITE_ROOMS_COLLECTION_ID,
 }
 
 export const client = new Client();
@@ -17,6 +20,7 @@ client
 
 export const avatar = new Avatars(client);
 export const account = new Account(client)
+export const databases = new Databases(client)
 
 export async function login() {
     try {
