@@ -59,10 +59,10 @@ export const categories = [
   { title: "All", category: "All" },
   { title: "Dating", category: "Dating" },
   { title: "Friendship", category: "Friendship" },
-  { title: "Dine in", category: "Dinein" },
-  { title: "Cafe", category: "Cafe" },
+  { title: "Restaurant / Cafe", category: "Restaurant" },
   { title: "Bar / Drink", category: "Drink" },
   { title: "Activities", category: "Activity" },
+  { title: "Workout", category: "Workout" },
   { title: "Sports", category: "Sports" },
   { title: "Entertainment", category: "Entertainment" },
   { title: "Others", category: "Others" },
@@ -103,7 +103,8 @@ export const settings = [
   },
 ];
 
-export const facilities = [
+// publicity, max guests, age limit, location, language
+export const rules = [
   {
     title: "Laundry",
     icon: icons.laundry,

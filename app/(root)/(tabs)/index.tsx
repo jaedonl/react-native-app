@@ -11,7 +11,7 @@ export default function Index() {
   const { user } = useGlobalContext();
 
   return (
-    <SafeAreaView className="bg-transparent h-full">
+    <SafeAreaView className="bg-white h-full">
       <FlatList 
         data={[1,2,3,4]}
         renderItem={({item}) => <Card />}
