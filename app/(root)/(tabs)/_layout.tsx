@@ -9,7 +9,7 @@ type TabIconProps = {
     title: string;
 }
 
-const TabIcon = ({ focused, icon, title} : TabIconProps) => (
+const TabIcon = ({ focused, icon, title } : TabIconProps) => (
     <View className='flex-1 mt-3 flex flex-col items-center'>
         <Image source={icon} tintColor={focused ? '#ff9913' : '#666876'} resizeMode='contain' className='size-6' />
         <Text className={`${focused ? 'text-primary-300 font-rubik-medium' : 'text-black-200 font-rubik'} text-xs w-full text-center mt-1`}>
@@ -54,6 +54,17 @@ const TabsLayout = () => {
                 }}
             />
             
+            <Tabs.Screen
+                name="addroom"
+                options={{
+                    title: 'Add',
+                    headerShown: false,
+                    tabBarIcon: ({ focused }) => (
+                        <TabIcon focused={focused} icon={icons.add} title='Add' />
+                    )
+                }}
+            />
+
             <Tabs.Screen
                 name="chat"
                 options={{

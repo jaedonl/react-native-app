@@ -11,6 +11,10 @@ import noResult from "@/assets/images/no-result.png";
 import booral from "@/assets/images/icon.png";
 import jaesoon from "@/assets/images/jaesoon.jpg";
 import kimtan from "@/assets/images/kimtan.jpg";
+import izakaya1 from "@/assets/images/izakaya.jpg";
+import pizza1 from "@/assets/images/pizza.jpg";
+import barhopping1 from "@/assets/images/barhopping.jpg";
+import pdt1 from "@/assets/images/pdt1.jpg";
 
 export default {
     onboarding,
@@ -25,5 +29,9 @@ export default {
     noResult,
     booral,
     jaesoon,
-    kimtan
+    kimtan,
+    izakaya1,
+    pizza1,
+    barhopping1,
+    pdt1,
 };

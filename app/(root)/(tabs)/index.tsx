@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { router, useLocalSearchParams } from "expo-router";
 import { Image, Text, TouchableOpacity, View, FlatList } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import images from "@/constants/images";
@@ -6,19 +8,28 @@ import Search from "@/components/Search";
 import { Card, FeaturedCard } from "@/components/Card";
 import Filters from "@/components/Filters";
 import { useGlobalContext } from "@/lib/global-provider";
+import { rooms } from "@/constants/data";
+
 
 export default function Index() {
   const { user } = useGlobalContext();
+  const params = useLocalSearchParams<{ query?: string; filter?: string }>();
+
+  const handleCardPress = (id: string) => {
+    router.push(`/rooms/${id}`)
+  };
 
   return (
     <SafeAreaView className="bg-white h-full">
       <FlatList 
-        data={[1,2,3,4]}
-        renderItem={({item}) => <Card />}
+        data={rooms}
+        // numColumns={2}
+        renderItem={({item}) => (
+          <Card item={item} onPress={() => handleCardPress(item.id)} />
+        )}
         keyExtractor={(item) => item.toString()}
-        numColumns={2}
-        contentContainerClassName="pb-32"
-        columnWrapperClassName="flex gap-5 px-5"
+        contentContainerClassName="pb-24"
+        // columnWrapperClassName="flex gap-5 px-5"
         showsVerticalScrollIndicator={false}
         ListHeaderComponent={
           <View className="px-5">
@@ -46,8 +57,8 @@ export default function Index() {
               </View>
 
               <FlatList 
-                data={[1,2,3]}
-                renderItem={({item}) => <FeaturedCard />}
+                data={rooms}
+                renderItem={({item}) => <FeaturedCard item={item} onPress={() => handleCardPress(item.id)}/>}
                 keyExtractor={(item) => item.toString()}
                 horizontal
                 showsHorizontalScrollIndicator={false}
@@ -70,10 +81,6 @@ export default function Index() {
           </View>
         }
       />
-
-      
-
-      
     </SafeAreaView>
   );
 }
