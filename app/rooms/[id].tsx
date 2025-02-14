@@ -12,7 +12,6 @@ import { useGlobalContext } from "@/lib/global-provider";
 
 const Rooms = () => {
     const { id } = useLocalSearchParams();
-    const { user } = useGlobalContext(); //temporarily
 
     const windowHeight = Dimensions.get("window").height;
 
@@ -41,13 +40,6 @@ const Rooms = () => {
         { url: images.defcon },
         { url: images.kimtan },
     ]
-
-    const INITIAL_REGION = {
-        latitude: 40.748140, 
-        longitude: -73.987874,
-        latitudeDelta: 0.005,
-        longitudeDelta: 0.005,
-    }
 
     return (
         <View>

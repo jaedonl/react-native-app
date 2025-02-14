@@ -343,7 +343,7 @@ export const boorals = [
     userId: '1',
     name: 'Hyunjin Kim',
     username: 'flushingTwice',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla velit tortor, sodales eu porta ac, pellentesque sit amet ex. Maecenas a dolor nec mi pretium volutpat. Donec sed egestas ligula. Vestibulum ac vehicula lectus.',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla velit tortor, sodales eu porta ac, pellentesque sit amet ex.',
     avatar: '1',
     age: 26,
     gender: 'Female',
@@ -351,13 +351,14 @@ export const boorals = [
     tags: ['Bar', 'Drink'],
     gallery: [1,2,3,4,5,6,7,8,9],
     upcoming: "1",
-    views: 2703
+    views: 2703,
+    totalviews: 72392
   },
   {
     userId: '2',
     name: 'Minyoung Kim',
     username: 'minyong',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla velit tortor, sodales eu porta ac, pellentesque sit amet ex. Maecenas a dolor nec mi pretium volutpat. Donec sed egestas ligula. Vestibulum ac vehicula lectus.',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla velit tortor, sodales eu porta ac, pellentesque sit amet ex.',
     avatar: '2',
     age: 30,
     gender: 'Female',
@@ -365,13 +366,14 @@ export const boorals = [
     tags: ['Bar', 'Drink'],
     gallery: [1,2,3,4,5,6,7,8,9],
     upcoming: "",
-    views: 1893
+    views: 1893,
+    totalviews: 72392
   },
   {
     userId: '3',
     name: 'Jaedon Lee',
     username: 'Dicdon',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla velit tortor, sodales eu porta ac, pellentesque sit amet ex. Maecenas a dolor nec mi pretium volutpat. Donec sed egestas ligula. Vestibulum ac vehicula lectus.',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla velit tortor, sodales eu porta ac, pellentesque sit amet ex.',
     avatar: '3',
     age: 30,
     gender: 'Male',
@@ -379,13 +381,14 @@ export const boorals = [
     tags: ['Bar', 'Drink'],
     gallery: [1,2,3,4,5,6,7,8,9],
     upcoming: "2",
-    views: 1939
+    views: 1939,
+    totalviews: 72392
   },
   {
     userId: '4',
     name: 'Snapchat Filter',
     username: 'Snapshit',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla velit tortor, sodales eu porta ac, pellentesque sit amet ex. Maecenas a dolor nec mi pretium volutpat. Donec sed egestas ligula. Vestibulum ac vehicula lectus.',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla velit tortor, sodales eu porta ac, pellentesque sit amet ex.',
     avatar: '4',
     age: 22,
     gender: 'Male',
@@ -393,13 +396,14 @@ export const boorals = [
     tags: ['Bar', 'Drink'],
     gallery: [1,2,3,4,5,6,7,8,9],
     upcoming: "",
-    views: 1233
+    views: 1233,
+    totalviews: 72392
   },
   {
     userId: '5',
     name: 'Choyun Kim',
     username: 'chocho',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla velit tortor, sodales eu porta ac, pellentesque sit amet ex. Maecenas a dolor nec mi pretium volutpat. Donec sed egestas ligula. Vestibulum ac vehicula lectus.',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla velit tortor, sodales eu porta ac, pellentesque sit amet ex.',
     avatar: '5',
     age: 30,
     gender: 'Female',
@@ -407,13 +411,14 @@ export const boorals = [
     tags: ['Bar', 'Drink'],
     gallery: [1,2,3,4,5,6,7,8,9],
     upcoming: "",
-    views: 2316
+    views: 2316,
+    totalviews: 72392
   },
   {
     userId: '6',
     name: 'Hobum Yoon',
     username: 'Hob',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla velit tortor, sodales eu porta ac, pellentesque sit amet ex. Maecenas a dolor nec mi pretium volutpat. Donec sed egestas ligula. Vestibulum ac vehicula lectus.',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla velit tortor, sodales eu porta ac, pellentesque sit amet ex.',
     avatar: '6',
     age: 31,
     gender: 'Male',
@@ -421,13 +426,14 @@ export const boorals = [
     tags: ['Bar', 'Drink'],
     gallery: [1,2,3,4,5,6,7,8,9],
     upcoming: "",
-    views: 1193
+    views: 1193,
+    totalviews: 72392
   },
   {
     userId: '7',
     name: 'Oliver Sam',
     username: 'Olivermanigga',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla velit tortor, sodales eu porta ac, pellentesque sit amet ex. Maecenas a dolor nec mi pretium volutpat. Donec sed egestas ligula. Vestibulum ac vehicula lectus.',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla velit tortor, sodales eu porta ac, pellentesque sit amet ex.',
     avatar: '7',
     age: 38,
     gender: 'Male',
@@ -435,13 +441,14 @@ export const boorals = [
     tags: ['Bar', 'Drink'],
     gallery: [1,2,3,4,5,6,7,8,9],
     upcoming: "3",
-    views: 902
+    views: 902,
+    totalviews: 72392
   },
   {
     userId: '8',
     name: 'Def con',
     username: 'Defcon',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla velit tortor, sodales eu porta ac, pellentesque sit amet ex. Maecenas a dolor nec mi pretium volutpat. Donec sed egestas ligula. Vestibulum ac vehicula lectus.',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla velit tortor, sodales eu porta ac, pellentesque sit amet ex.',
     avatar: '8',
     age: 46,
     gender: 'Male',
@@ -449,13 +456,14 @@ export const boorals = [
     tags: ['Bar', 'Drink'],
     gallery: [1,2,3,4,5,6,7,8,9],
     upcoming: "4",
-    views: 743
+    views: 743,
+    totalviews: 72392
   },
   {
     userId: '9',
     name: 'Tan Kim',
     username: 'kimtan',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla velit tortor, sodales eu porta ac, pellentesque sit amet ex. Maecenas a dolor nec mi pretium volutpat. Donec sed egestas ligula. Vestibulum ac vehicula lectus.',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla velit tortor, sodales eu porta ac, pellentesque sit amet ex.',
     avatar: '9',
     age: 27,
     gender: 'Male',
@@ -463,6 +471,7 @@ export const boorals = [
     tags: ['Bar', 'Drink'],
     gallery: [1,2,3,4,5,6,7,8,9],
     upcoming: "",
-    views: 3450
+    views: 3450,
+    totalviews: 72392
   },
 ]

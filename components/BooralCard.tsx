@@ -28,8 +28,13 @@ const BooralCard = ({ item, onPress }: BooralCardProps) => {
             <Image source={images.cardGradient} className="size-full rounded-2xl absolute bottom-0" />
             
             <View className="flex flex-row items-center bg-white/90 px-3 py-1.5 rounded-full absolute top-3 right-3">
-                <Image source={icons.view} className="size-3.5" />
-                <Text className="text-xs font-rubik-bold text-primary-300 ml-1">{item.views.toLocaleString()}</Text>
+                {/* <Image source={icons.view} className="size-3.5" />
+                <Text className="text-xs font-rubik-bold text-primary-300 ml-1">{item.views.toLocaleString()}</Text> */}
+
+                <View className='flex flex-row gap-1'>
+                    <Text className='text-xs '>Today <Text className='text-xs text-red-600'>{item.views.toLocaleString()}</Text></Text>
+                </View>
+                
             </View>
 
             <View className="flex flex-col items items-start absolute bottom-5 inset-x-5">
