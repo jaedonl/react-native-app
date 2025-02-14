@@ -5,11 +5,11 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import images from "@/constants/images";
 import icons from "@/constants/icons";
 import Search from "@/components/Search";
-import { Card, FeaturedCard } from "@/components/Card";
+import { Card } from "@/components/Card";
+import BooralCard from "@/components/BooralCard";
 import Filters from "@/components/Filters";
 import { useGlobalContext } from "@/lib/global-provider";
-import { rooms } from "@/constants/data";
-
+import { rooms, boorals } from "@/constants/data";
 
 export default function Index() {
   const { user } = useGlobalContext();
@@ -19,17 +19,19 @@ export default function Index() {
     router.push(`/rooms/${id}`)
   };
 
+  const handleBooralPress = (id: string) => {
+    router.push(`/booral/${id}`)
+  };
+
   return (
     <SafeAreaView className="bg-white h-full">
       <FlatList 
         data={rooms}
-        // numColumns={2}
         renderItem={({item}) => (
           <Card item={item} onPress={() => handleCardPress(item.id)} />
         )}
-        keyExtractor={(item) => item.toString()}
+        keyExtractor={(item) => item.id.toString()}
         contentContainerClassName="pb-24"
-        // columnWrapperClassName="flex gap-5 px-5"
         showsVerticalScrollIndicator={false}
         ListHeaderComponent={
           <View className="px-5">
@@ -49,7 +51,7 @@ export default function Index() {
             
             <View className="my-5">
               <View className="flex flex-row items-center justify-between">
-                <Text className="text-xl font-rubik-bold text-black-300">Featured</Text>
+                <Text className="text-xl font-rubik-bold text-black-300">Hot Booral🔥</Text>
 
                 <TouchableOpacity>
                   <Text className="text-base font-rubik-medium text-primary-300">See All</Text>
@@ -57,9 +59,11 @@ export default function Index() {
               </View>
 
               <FlatList 
-                data={rooms}
-                renderItem={({item}) => <FeaturedCard item={item} onPress={() => handleCardPress(item.id)}/>}
-                keyExtractor={(item) => item.toString()}
+                data={boorals}
+                renderItem={({item}) => (
+                  <BooralCard item={item} onPress={() => handleBooralPress(item.userId)}/>
+                )}
+                keyExtractor={(item) => item.userId.toString()}
                 horizontal
                 showsHorizontalScrollIndicator={false}
                 bounces={false}
@@ -69,7 +73,7 @@ export default function Index() {
 
             <View className="my-5">
               <View className="flex flex-row items-center justify-between">
-                <Text className="text-xl font-rubik-bold text-black-300">Our Recommendation</Text>
+                <Text className="text-xl font-rubik-bold text-black-300">Latest Event</Text>
                 <TouchableOpacity>
                   <Text className="text-base font-rubik-medium text-primary-300">See All</Text>
                 </TouchableOpacity>

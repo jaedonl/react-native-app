@@ -6,6 +6,16 @@ import * as SplashScreen from "expo-splash-screen";
 import "./globals.css";
 import GlobalProvider from "@/lib/global-provider";
 
+import {GestureHandlerRootView} from 'react-native-gesture-handler';
+
+import { enableScreens } from 'react-native-screens';
+enableScreens();
+
+export type RootStackParamList = {
+  Tabs: undefined;
+  ProductDetail: { id: number };
+};
+
 export default function RootLayout() {
   const [fontsLoaded] = useFonts({
     "Rubik-Bold": require("../assets/fonts/Rubik-Bold.ttf"),
@@ -28,7 +38,15 @@ export default function RootLayout() {
 
   return (
       <GlobalProvider>
-        <Stack screenOptions={{ headerShown: false }} />
+        <GestureHandlerRootView>
+        <Stack 
+          screenOptions={{ 
+            headerShown: false,
+            animation: "slide_from_right",
+            gestureEnabled: true, 
+          }} 
+        />
+        </GestureHandlerRootView>
       </GlobalProvider>
   );
 }
