@@ -352,7 +352,27 @@ export const boorals = [
     gallery: [1,2,3,4,5,6,7,8,9],
     upcoming: "1",
     views: 2703,
-    totalviews: 72392
+    totalviews: 72392,
+    posts: [
+      {
+        postId: '1',
+        createdAt: Date.now(),
+        body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque posuere porta.',
+        likes: 273,
+        comments: [
+          {
+            booralId: '3',
+            comment: 'lol 😂',
+            createdAt: Date.now()
+          },
+          {
+            booralId: '8',
+            comment: '😂😂😂😂😂',
+            createdAt: Date.now()
+          }
+        ]
+      }
+    ]
   },
   {
     userId: '2',
