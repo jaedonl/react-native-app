@@ -241,6 +241,7 @@ export const boorals = [
         createdAt: Date.now(),
         body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         likes: 111,
+        publicity: false,
         comments: [
           {
             booralId: '3',
@@ -259,6 +260,7 @@ export const boorals = [
         createdAt: Date.now(),
         body: 'Nulla et enim nec elit ornare luctus.',
         likes: 111,
+        publicity: true,
         comments: [
           {
             booralId: '3',
@@ -277,6 +279,7 @@ export const boorals = [
         createdAt: Date.now(),
         body: 'Cras ut posuere urna. Vestibulum vulputate nulla semper ultrices laoreet. Fusce posuere sapien vel mauris auctor pellentesque.',
         likes: 111,
+        publicity: true,
         comments: [
           {
             booralId: '3',
@@ -312,6 +315,7 @@ export const boorals = [
         createdAt: Date.now(),
         body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque posuere porta.',
         likes: 222,
+        publicity: true,
         comments: [
           {
             booralId: '3',
@@ -330,6 +334,7 @@ export const boorals = [
         createdAt: Date.now(),
         body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque posuere porta.',
         likes: 222,
+        publicity: true,
         comments: [
           {
             booralId: '3',
@@ -365,6 +370,7 @@ export const boorals = [
         createdAt: Date.now(),
         body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque posuere porta.',
         likes: 333,
+        publicity: true,
         comments: [
           {
             booralId: '3',
@@ -383,6 +389,7 @@ export const boorals = [
         createdAt: Date.now(),
         body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque posuere porta.',
         likes: 333,
+        publicity: true,
         comments: [
           {
             booralId: '3',
@@ -418,6 +425,7 @@ export const boorals = [
         createdAt: Date.now(),
         body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque posuere porta.',
         likes: 444,
+        publicity: true,
         comments: [
           {
             booralId: '3',
@@ -436,6 +444,7 @@ export const boorals = [
         createdAt: Date.now(),
         body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque posuere porta.',
         likes: 444,
+        publicity: true,
         comments: [
           {
             booralId: '3',
@@ -471,6 +480,7 @@ export const boorals = [
         createdAt: Date.now(),
         body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque posuere porta.',
         likes: 555,
+        publicity: true,
         comments: [
           {
             booralId: '3',
@@ -489,6 +499,7 @@ export const boorals = [
         createdAt: Date.now(),
         body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque posuere porta.',
         likes: 555,
+        publicity: true,
         comments: [
           {
             booralId: '3',
@@ -524,6 +535,7 @@ export const boorals = [
         createdAt: Date.now(),
         body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque posuere porta.',
         likes: 666,
+        publicity: true,
         comments: [
           {
             booralId: '3',
@@ -542,6 +554,7 @@ export const boorals = [
         createdAt: Date.now(),
         body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque posuere porta.',
         likes: 666,
+        publicity: true,
         comments: [
           {
             booralId: '3',
@@ -577,6 +590,7 @@ export const boorals = [
         createdAt: Date.now(),
         body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque posuere porta.',
         likes: 777,
+        publicity: true,
         comments: [
           {
             booralId: '3',
@@ -595,6 +609,7 @@ export const boorals = [
         createdAt: Date.now(),
         body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque posuere porta.',
         likes: 777,
+        publicity: true,
         comments: [
           {
             booralId: '3',
@@ -630,6 +645,7 @@ export const boorals = [
         createdAt: Date.now(),
         body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque posuere porta.',
         likes: 888,
+        publicity: true,
         comments: [
           {
             booralId: '3',
@@ -648,6 +664,7 @@ export const boorals = [
         createdAt: Date.now(),
         body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque posuere porta.',
         likes: 888,
+        publicity: true,
         comments: [
           {
             booralId: '3',
@@ -684,6 +701,7 @@ export const boorals = [
         // body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque posuere porta.',
         body: '재도니.. 은서.. 좋아하냐..?',
         likes: 999,
+        publicity: true,
         comments: [
           {
             booralId: '3',
@@ -702,6 +720,7 @@ export const boorals = [
         createdAt: Date.now(),
         body: '아-앙- 개꿀딱스, 은서 사랑 버-억^^',
         likes: 999,
+        publicity: true,
         comments: [
           {
             booralId: '3',

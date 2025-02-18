@@ -35,6 +35,13 @@ import add from "@/assets/icons/add_circle_outline.png";
 import view from "@/assets/icons/view.png";
 import comment from "@/assets/icons/comment.png";
 import flag from "@/assets/icons/flag.png";
+import collections from "@/assets/icons/collections.png";
+import event from "@/assets/icons/event.png";
+import lock from "@/assets/icons/lock.png";
+import more from "@/assets/icons/more.png";
+import write from "@/assets/icons/write.png";
+import globe from "@/assets/icons/public.png";
+import forum from "@/assets/icons/forum.png";
 
 export default {
     google,
@@ -74,4 +81,11 @@ export default {
     view,
     comment,
     flag,
+    collections,
+    event,
+    lock,
+    more,
+    write,
+    globe,
+    forum
 };

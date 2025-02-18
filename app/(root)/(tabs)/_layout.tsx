@@ -6,7 +6,7 @@ import icons from  '@/constants/icons'
 type TabIconProps = {
     focused: boolean;
     icon: any;
-    // title: string;
+    title: string;
 }
 
 const TabIcon = ({ focused, icon } : TabIconProps) => (

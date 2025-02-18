@@ -4,21 +4,23 @@ import { router, useLocalSearchParams } from "expo-router";
 import icons from "@/constants/icons";
 import images from "@/constants/images";
 import { useGlobalContext } from "@/lib/global-provider";
-import { boorals } from "@/constants/data";
+import { boorals, rooms } from "@/constants/data";
 import PagerView from 'react-native-pager-view';
 import Post from '@/components/Post';
 import GridGallery from '@/components/GridGallery';
+import { Card } from '@/components/Card';
 
 type Tab = {
   key: string;
   title: string;
+  icon: any;
 };
 
 const tabs: Tab[] = [
-  { key: 'posts', title: 'Posts' },
-  { key: 'memories', title: 'Memories' },
-  { key: 'events', title: 'Events' },
-  { key: 'letters', title: 'Letters' },
+  { key: 'posts', title: 'Posts', icon: icons.forum },
+  { key: 'memories', title: 'Memories', icon: icons.collections },
+  { key: 'rooms', title: 'Rooms', icon: icons.event },
+  { key: 'letters', title: 'Letters',icon: icons.write },
 ];
 
 const Booral = () => {
@@ -26,6 +28,8 @@ const Booral = () => {
   const booral = boorals[parseInt(id.toString()) - 1];
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const pagerRef = useRef<PagerView>(null);
+
+  const roomsTobeRendered = rooms.filter((room) => room.hostBooral.userId === id)
 
   // Called when the page is changed by swipe.
   const onPageSelected = (e: any) => {
@@ -60,6 +64,10 @@ const Booral = () => {
   });
   
   const beBooral = (id: string) => {}
+
+  const handleCardPress = (id: string) => {
+    router.push(`/rooms/${id}`)
+  };
 
   return (
     <SafeAreaView className="bg-white h-full">
@@ -121,18 +129,32 @@ const Booral = () => {
         onPageSelected={onPageSelected}
         onPageScroll={onPageScroll}
       >
-        <View key="posts" className="flex-1 mt-2">
+        <View key="posts" className="flex flex-1 mt-1">
           {booral.posts.map((post) => (
             <Post userId={booral.userId} post={post} />
           ))}
         </View>
         
-        <View key="memories" className="flex flex-1">
+        <View key="memories" className="flex flex-1 mt-1">
           <GridGallery />
         </View>
 
-        <View key="events" className="flex flex-1 justify-center items-center">
-          <Text className="text-xl">Content for Events</Text>
+        <View key="events" className="flex flex-1 mt-1">
+          {roomsTobeRendered.length > 0 ? 
+            <FlatList 
+              data={roomsTobeRendered}
+              keyExtractor={(item) => item.toString()}
+              contentContainerClassName="flex"
+              showsVerticalScrollIndicator={false}
+              renderItem={({item}) => (
+                  <Card item={item} onPress={() => handleCardPress(item.id)} />
+              )}
+            /> 
+            : <View className='flex flex-1 justify-center items-center'>
+                <Text>There are no rooms</Text>
+              </View>
+          }
+          
         </View>
 
         <View key="letters" className="flex flex-1 justify-center items-center">
