@@ -6,6 +6,8 @@ import images from "@/constants/images";
 import { useGlobalContext } from "@/lib/global-provider";
 import { boorals } from "@/constants/data";
 import PagerView from 'react-native-pager-view';
+import Post from '@/components/Post';
+import GridGallery from '@/components/GridGallery';
 
 type Tab = {
   key: string;
@@ -64,7 +66,7 @@ const Booral = () => {
       <View className='flex flex-row gap-4 px-5 my-4'>
         <Image 
           source={booral.avatar === '1' ? images.hyunjin : booral.avatar === '2' ? images.minyoung : booral.avatar === '3' ? images.jaedon : booral.avatar === '4' ? images.snapchatfilter : booral.avatar === '5' ? images.chohyun : booral.avatar === '6' ? images.hob : booral.avatar === '7' ? images.oliversam : booral.avatar === '8' ? images.defcon : booral.avatar === '9' ? images.kimtan : images.jaesoon}
-          className="size-36 rounded-full border border- border-primary-200"
+          className="size-36 rounded-full border border-primary-300"
         />
 
         <View className='flex flex-col flex-1 gap-1 py-2'>
@@ -90,7 +92,7 @@ const Booral = () => {
       </View>
 
       <View className='relative'>
-        <View className='flex flex-row justify-between items-center border-b border-gray-400'>
+        <View className='flex flex-row justify-between items-center border-gray-400'>
           {tabs.map((tab, idx) => (
             <TouchableOpacity key={tab.key} onPress={() => onTabPress(idx)} className='flex-1 py-1'>
               <Text className={`text-md text-center py-1 ${selectedIndex === idx ? 'font-bold' : 'text-gray-500'}`}>
@@ -119,12 +121,14 @@ const Booral = () => {
         onPageSelected={onPageSelected}
         onPageScroll={onPageScroll}
       >
-        <View key="posts" className="flex flex-1 justify-center items-center">
-          <Text className="text-xl">Content for Posts</Text>
+        <View key="posts" className="flex-1 mt-2">
+          {booral.posts.map((post) => (
+            <Post userId={booral.userId} post={post} />
+          ))}
         </View>
         
-        <View key="memories" className="flex flex-1 justify-center items-center">
-          <Text className="text-xl">Content for Memories</Text>
+        <View key="memories" className="flex flex-1">
+          <GridGallery />
         </View>
 
         <View key="events" className="flex flex-1 justify-center items-center">

@@ -1,6 +1,6 @@
 import icons from "@/constants/icons";
 import images from "@/constants/images";
-import { Image, Text, Touchable, TouchableOpacity, View } from "react-native";
+import { Image, Text, TouchableOpacity, View } from "react-native";
 
 interface CardProps {
     item: {
@@ -22,7 +22,7 @@ interface CardProps {
 
 export const Card = ({ item, onPress }: CardProps) => {
     return (
-        <TouchableOpacity onPress={onPress} className="flex flex-row gap-3 px-2 py-2 rounded-xl bg-white shadow-md shadow-black-100/20 relative mx-5 mb-4">
+        <TouchableOpacity onPress={onPress} className="flex flex-row gap-3 px-1 py-2 rounded-xl bg-white shadow-md shadow-black-100/20 relative mx-2 mb-2">
             <Image 
                 source={item.id === '1' ? images.izakaya1 : item.id === '2' ? images.pizza1 : item.id === '3' ? images.barhopping1 : item.id === '4' ? images.pdt1 : item.id === '5' ? images.widowjane1 : item.id === '6' ? images.jongrobbq1 : ''}
                 className="size-32 rounded-xl" 
@@ -39,12 +39,12 @@ export const Card = ({ item, onPress }: CardProps) => {
                         {item.boorals.length === item.size ? (
                             <>
                                 <Image source={icons.person} className="size-4 rounded-full"/>
-                                <Text className="text-xs font-rubik-semibold text-red-600">{item.boorals.length}/{item.size} <Text className="text-xs font-rubik-semibold text-red-600 capitalize">full</Text></Text>
+                                <Text className="text-xs font-rubik-medium text-red-600">{item.boorals.length}/{item.size} <Text className="text-xs font-rubik-medium text-red-600 capitalize">full</Text></Text>
                             </>
                         ) : (
                             <>
                                 <Image source={icons.person} className="size-4 rounded-full"/>
-                                <Text className="text-xs font-rubik-semibold text-black-100">{item.boorals.length}/{item.size}</Text>
+                                <Text className="text-xs font-rubik-medium text-black-100">{item.boorals.length}/{item.size}</Text>
                             </>
                         )}
                         </View>
@@ -58,7 +58,7 @@ export const Card = ({ item, onPress }: CardProps) => {
                 <View className="absolute bottom-0 left-0">
                     <View className="flex flex-row gap-2">
                         {item.categories.map((category) => (
-                            <Text className="text-xs font-rubik-bold text-primary-300 px-1 py-1 bg-primary-100 rounded-full">
+                            <Text className="text-xs font-rubik-bold text-primary-300 px-2 py-1 bg-primary-100 rounded-full">
                                 {category}
                             </Text>
                         ))}

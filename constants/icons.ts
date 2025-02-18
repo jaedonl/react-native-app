@@ -33,6 +33,8 @@ import location from "@/assets/icons/location.png";
 import edit from "@/assets/icons/edit.png";
 import add from "@/assets/icons/add_circle_outline.png";
 import view from "@/assets/icons/view.png";
+import comment from "@/assets/icons/comment.png";
+import flag from "@/assets/icons/flag.png";
 
 export default {
     google,
@@ -69,5 +71,7 @@ export default {
     location,
     edit,
     add,
-    view
+    view,
+    comment,
+    flag,
 };

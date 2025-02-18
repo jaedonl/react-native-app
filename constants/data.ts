@@ -1,60 +1,5 @@
 import { ID } from "react-native-appwrite";
 import icons from "./icons";
-import images from "./images";
-
-export const cards = [
-  {
-    title: "Card 1",
-    location: "Location 1",
-    price: "$100",
-    rating: 4.8,
-    category: "house",
-    image: images.newYork,
-  },
-  {
-    title: "Card 2",
-    location: "Location 2",
-    price: "$200",
-    rating: 3,
-    category: "house",
-    image: images.japan,
-  },
-  {
-    title: "Card 3",
-    location: "Location 3",
-    price: "$300",
-    rating: 2,
-    category: "flat",
-    image: images.newYork,
-  },
-  {
-    title: "Card 4",
-    location: "Location 4",
-    price: "$400",
-    rating: 5,
-    category: "villa",
-    image: images.japan,
-  },
-];
-
-export const featuredCards = [
-  {
-    title: "Featured 1",
-    location: "Location 1",
-    price: "$100",
-    rating: 4.8,
-    image: images.newYork,
-    category: "house",
-  },
-  {
-    title: "Featured 2",
-    location: "Location 2",
-    price: "$200",
-    rating: 3,
-    image: images.japan,
-    category: "flat",
-  },
-];
 
 export const categories = [
   { title: "All", category: "All" },
@@ -101,69 +46,6 @@ export const settings = [
   {
     title: "Invite Friends",
     icon: icons.people,
-  },
-];
-
-// publicity, max guests, age limit, location, language
-export const rules = [
-  {
-    title: "Laundry",
-    icon: icons.laundry,
-  },
-  {
-    title: "Car Parking",
-    icon: icons.carPark,
-  },
-  {
-    title: "Sports Center",
-    icon: icons.run,
-  },
-  {
-    title: "Cutlery",
-    icon: icons.cutlery,
-  },
-  {
-    title: "Gym",
-    icon: icons.dumbell,
-  },
-  {
-    title: "Swimming pool",
-    icon: icons.swim,
-  },
-  {
-    title: "Wifi",
-    icon: icons.wifi,
-  },
-  {
-    title: "Pet Center",
-    icon: icons.dog,
-  },
-];
-
-export const gallery = [
-  {
-    id: 1,
-    image: images.newYork,
-  },
-  {
-    id: 2,
-    image: images.japan,
-  },
-  {
-    id: 3,
-    image: images.newYork,
-  },
-  {
-    id: 4,
-    image: images.japan,
-  },
-  {
-    id: 5,
-    image: images.newYork,
-  },
-  {
-    id: 6,
-    image: images.japan,
   },
 ];
 
@@ -357,8 +239,44 @@ export const boorals = [
       {
         postId: '1',
         createdAt: Date.now(),
-        body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque posuere porta.',
-        likes: 273,
+        body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        likes: 111,
+        comments: [
+          {
+            booralId: '3',
+            comment: 'lol 😂',
+            createdAt: Date.now()
+          },
+          {
+            booralId: '8',
+            comment: '😂😂😂😂😂',
+            createdAt: Date.now()
+          }
+        ]
+      },
+      {
+        postId: '2',
+        createdAt: Date.now(),
+        body: 'Nulla et enim nec elit ornare luctus.',
+        likes: 111,
+        comments: [
+          {
+            booralId: '3',
+            comment: 'lol 😂',
+            createdAt: Date.now().toLocaleString()
+          },
+          {
+            booralId: '8',
+            comment: '😂😂😂😂😂',
+            createdAt: Date.now()
+          }
+        ]
+      },
+      {
+        postId: '3',
+        createdAt: Date.now(),
+        body: 'Cras ut posuere urna. Vestibulum vulputate nulla semper ultrices laoreet. Fusce posuere sapien vel mauris auctor pellentesque.',
+        likes: 111,
         comments: [
           {
             booralId: '3',
@@ -387,7 +305,45 @@ export const boorals = [
     gallery: [1,2,3,4,5,6,7,8,9],
     upcoming: "",
     views: 1893,
-    totalviews: 72392
+    totalviews: 72392,
+    posts: [
+      {
+        postId: '4',
+        createdAt: Date.now(),
+        body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque posuere porta.',
+        likes: 222,
+        comments: [
+          {
+            booralId: '3',
+            comment: 'lol 😂',
+            createdAt: Date.now()
+          },
+          {
+            booralId: '8',
+            comment: '😂😂😂😂😂',
+            createdAt: Date.now()
+          }
+        ]
+      },
+      {
+        postId: '5',
+        createdAt: Date.now(),
+        body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque posuere porta.',
+        likes: 222,
+        comments: [
+          {
+            booralId: '3',
+            comment: 'lol 😂',
+            createdAt: Date.now()
+          },
+          {
+            booralId: '8',
+            comment: '😂😂😂😂😂',
+            createdAt: Date.now()
+          }
+        ]
+      }
+    ]
   },
   {
     userId: '3',
@@ -402,7 +358,45 @@ export const boorals = [
     gallery: [1,2,3,4,5,6,7,8,9],
     upcoming: "2",
     views: 1939,
-    totalviews: 72392
+    totalviews: 72392,
+    posts: [
+      {
+        postId: '6',
+        createdAt: Date.now(),
+        body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque posuere porta.',
+        likes: 333,
+        comments: [
+          {
+            booralId: '3',
+            comment: 'lol 😂',
+            createdAt: Date.now()
+          },
+          {
+            booralId: '8',
+            comment: '😂😂😂😂😂',
+            createdAt: Date.now()
+          }
+        ]
+      },
+      {
+        postId: '7',
+        createdAt: Date.now(),
+        body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque posuere porta.',
+        likes: 333,
+        comments: [
+          {
+            booralId: '3',
+            comment: 'lol 😂',
+            createdAt: Date.now()
+          },
+          {
+            booralId: '8',
+            comment: '😂😂😂😂😂',
+            createdAt: Date.now()
+          }
+        ]
+      }
+    ]
   },
   {
     userId: '4',
@@ -417,7 +411,45 @@ export const boorals = [
     gallery: [1,2,3,4,5,6,7,8,9],
     upcoming: "",
     views: 1233,
-    totalviews: 72392
+    totalviews: 72392,
+    posts: [
+      {
+        postId: '8',
+        createdAt: Date.now(),
+        body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque posuere porta.',
+        likes: 444,
+        comments: [
+          {
+            booralId: '3',
+            comment: 'lol 😂',
+            createdAt: Date.now()
+          },
+          {
+            booralId: '8',
+            comment: '😂😂😂😂😂',
+            createdAt: Date.now()
+          }
+        ]
+      },
+      {
+        postId: '9',
+        createdAt: Date.now(),
+        body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque posuere porta.',
+        likes: 444,
+        comments: [
+          {
+            booralId: '3',
+            comment: 'lol 😂',
+            createdAt: Date.now()
+          },
+          {
+            booralId: '8',
+            comment: '😂😂😂😂😂',
+            createdAt: Date.now()
+          }
+        ]
+      }
+    ]
   },
   {
     userId: '5',
@@ -432,7 +464,45 @@ export const boorals = [
     gallery: [1,2,3,4,5,6,7,8,9],
     upcoming: "",
     views: 2316,
-    totalviews: 72392
+    totalviews: 72392,
+    posts: [
+      {
+        postId: '10',
+        createdAt: Date.now(),
+        body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque posuere porta.',
+        likes: 555,
+        comments: [
+          {
+            booralId: '3',
+            comment: 'lol 😂',
+            createdAt: Date.now()
+          },
+          {
+            booralId: '8',
+            comment: '😂😂😂😂😂',
+            createdAt: Date.now()
+          }
+        ]
+      },
+      {
+        postId: '11',
+        createdAt: Date.now(),
+        body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque posuere porta.',
+        likes: 555,
+        comments: [
+          {
+            booralId: '3',
+            comment: 'lol 😂',
+            createdAt: Date.now()
+          },
+          {
+            booralId: '8',
+            comment: '😂😂😂😂😂',
+            createdAt: Date.now()
+          }
+        ]
+      }
+    ]
   },
   {
     userId: '6',
@@ -447,7 +517,45 @@ export const boorals = [
     gallery: [1,2,3,4,5,6,7,8,9],
     upcoming: "",
     views: 1193,
-    totalviews: 72392
+    totalviews: 72392,
+    posts: [
+      {
+        postId: '12',
+        createdAt: Date.now(),
+        body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque posuere porta.',
+        likes: 666,
+        comments: [
+          {
+            booralId: '3',
+            comment: 'lol 😂',
+            createdAt: Date.now()
+          },
+          {
+            booralId: '8',
+            comment: '😂😂😂😂😂',
+            createdAt: Date.now()
+          }
+        ]
+      },
+      {
+        postId: '13',
+        createdAt: Date.now(),
+        body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque posuere porta.',
+        likes: 666,
+        comments: [
+          {
+            booralId: '3',
+            comment: 'lol 😂',
+            createdAt: Date.now()
+          },
+          {
+            booralId: '8',
+            comment: '😂😂😂😂😂',
+            createdAt: Date.now()
+          }
+        ]
+      }
+    ]
   },
   {
     userId: '7',
@@ -462,7 +570,45 @@ export const boorals = [
     gallery: [1,2,3,4,5,6,7,8,9],
     upcoming: "3",
     views: 902,
-    totalviews: 72392
+    totalviews: 72392,
+    posts: [
+      {
+        postId: '14',
+        createdAt: Date.now(),
+        body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque posuere porta.',
+        likes: 777,
+        comments: [
+          {
+            booralId: '3',
+            comment: 'lol 😂',
+            createdAt: Date.now()
+          },
+          {
+            booralId: '8',
+            comment: '😂😂😂😂😂',
+            createdAt: Date.now()
+          }
+        ]
+      },
+      {
+        postId: '15',
+        createdAt: Date.now(),
+        body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque posuere porta.',
+        likes: 777,
+        comments: [
+          {
+            booralId: '3',
+            comment: 'lol 😂',
+            createdAt: Date.now()
+          },
+          {
+            booralId: '8',
+            comment: '😂😂😂😂😂',
+            createdAt: Date.now()
+          }
+        ]
+      }
+    ]
   },
   {
     userId: '8',
@@ -477,7 +623,45 @@ export const boorals = [
     gallery: [1,2,3,4,5,6,7,8,9],
     upcoming: "4",
     views: 743,
-    totalviews: 72392
+    totalviews: 72392,
+    posts: [
+      {
+        postId: '16',
+        createdAt: Date.now(),
+        body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque posuere porta.',
+        likes: 888,
+        comments: [
+          {
+            booralId: '3',
+            comment: 'lol 😂',
+            createdAt: Date.now()
+          },
+          {
+            booralId: '8',
+            comment: '😂😂😂😂😂',
+            createdAt: Date.now()
+          }
+        ]
+      },
+      {
+        postId: '17',
+        createdAt: Date.now(),
+        body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque posuere porta.',
+        likes: 888,
+        comments: [
+          {
+            booralId: '3',
+            comment: 'lol 😂',
+            createdAt: Date.now()
+          },
+          {
+            booralId: '8',
+            comment: '😂😂😂😂😂',
+            createdAt: Date.now()
+          }
+        ]
+      }
+    ]
   },
   {
     userId: '9',
@@ -492,6 +676,45 @@ export const boorals = [
     gallery: [1,2,3,4,5,6,7,8,9],
     upcoming: "",
     views: 3450,
-    totalviews: 72392
+    totalviews: 72392,
+    posts: [
+      {
+        postId: '18',
+        createdAt: Date.now(),
+        // body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque posuere porta.',
+        body: '재도니.. 은서.. 좋아하냐..?',
+        likes: 999,
+        comments: [
+          {
+            booralId: '3',
+            comment: 'lol 😂',
+            createdAt: Date.now()
+          },
+          {
+            booralId: '8',
+            comment: '😂😂😂😂😂',
+            createdAt: Date.now()
+          },
+        ]
+      },
+      {
+        postId: '19',
+        createdAt: Date.now(),
+        body: '아-앙- 개꿀딱스, 은서 사랑 버-억^^',
+        likes: 999,
+        comments: [
+          {
+            booralId: '3',
+            comment: 'lol 😂',
+            createdAt: Date.now()
+          },
+          {
+            booralId: '8',
+            comment: '😂😂😂😂😂',
+            createdAt: Date.now()
+          }
+        ]
+      },
+    ]
   },
 ]

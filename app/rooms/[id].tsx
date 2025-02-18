@@ -29,18 +29,6 @@ const Rooms = () => {
     ]
     const galleryToRender = gallery.length > 3 ? gallery.slice(0,3) : gallery;
 
-    const boorals = [
-        { url: images.hyunjin },
-        { url: images.minyoung },
-        { url: images.jaedon },
-        { url: images.snapchatfilter },
-        { url: images.chohyun },
-        { url: images.hob },
-        { url: images.oliversam },
-        { url: images.defcon },
-        { url: images.kimtan },
-    ]
-
     return (
         <View>
             <ScrollView

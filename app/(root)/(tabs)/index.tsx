@@ -34,7 +34,7 @@ export default function Index() {
         contentContainerClassName="pb-24"
         showsVerticalScrollIndicator={false}
         ListHeaderComponent={
-          <View className="px-5">
+          <View className="px-2">
             <View className="flex flex-row items-center justify-between mt-5">
               <View className="flex flex-row items-center">
                 <Image source={{ uri: user?.avatar}} className="size-12 rounded-full" />
@@ -67,7 +67,7 @@ export default function Index() {
                 horizontal
                 showsHorizontalScrollIndicator={false}
                 bounces={false}
-                contentContainerClassName="flex gap-5 mt-5"
+                contentContainerClassName="flex gap-4 mt-5"
               />
             </View>
 
